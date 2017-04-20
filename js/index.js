@@ -12,15 +12,24 @@ $('.btn').on('click',function(){
   function calculate(){
     if(nowYear<(val%12) && (val%12)!==0){
       let sx1=nowYear-(val%12)+12;
-      $('.output').html(sx[sx1]);
+      $('.words').html(sx[sx1]);
+      let urls = 'url(./pic/' + sx1 + '.jpg)';
+      $('.output').css('background-image',urls);
+      $('.output').css('background-repeat','no-repeat');
+
     }else if(nowYear>=(val%12) && (val%12)!==0){
       let sx1 =(val%12)-1;
-      $('.output').html(sx[sx1]);
+      $('.words').html(sx[sx1]);
+      let urls = 'url(./pic/' + sx1 + '.jpg)';
+      $('.output').css('background-image',urls);
+      $('.output').css('background-repeat','no-repeat');
 
     }else if((val%12)===0){
       let sx1 = nowYear;
-      $('.output').html(sx[sx1]);
-
+      $('.words').html(sx[sx1]);
+      let urls = 'url(./pic/' + sx1 + '.jpg)';
+      $('.output').css('background-image',urls);
+      $('.output').css('background-repeat','no-repeat');
     }
   }
 })
