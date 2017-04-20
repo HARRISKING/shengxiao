@@ -1,0 +1,60 @@
+header,body,section,p,input,div{
+  margin: 0;
+  padding: 0;
+}
+
+
+body{
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+
+.head,.foot{
+  background-color: #0767c8;
+  height: 50px;
+  color: #fff;
+  text-align: center;
+}
+
+.main{
+  display: flex;
+  justify-content: space-around;
+  margin:20px auto;
+}
+
+.main input{
+  border: 5px solid #0767c8;
+  border-radius: 5px;
+  width: 80%;
+  height: 50px;
+  font-size: 20px;
+  padding-left: 10px;
+}
+
+.main .btn{
+  width: 15%;
+  height: 50px;
+  background-color: #0767c8;
+  border-radius: 5px;
+  border: none;
+}
+
+.output{
+  border: 5px solid #0767c8;
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+  border-radius: 5px;
+  font-size: 50px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.foot{
+  width: 500px;
+  position: fixed;
+  bottom: 0px;
+}
