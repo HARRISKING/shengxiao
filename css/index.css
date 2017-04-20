@@ -39,7 +39,7 @@ body{
   border-radius: 5px;
   width: 70%;
   height: 40px;
-  font-size: 20px;
+  font-size: 15px;
   padding-left: 10px;
 }
 
@@ -50,12 +50,12 @@ body{
   border-radius: 5px;
   border: none;
   color:#fff;
-  font-size: 25px;
+  font-size: 20px;
 }
 
 .output{
   border: 5px solid #0767c8;
-  width: 66%;
+  width: 278.4px;
   height: 348px;
   margin: 0 auto;
   border-radius: 5px;
@@ -81,4 +81,5 @@ body{
   width: 500px;
   position: fixed;
   bottom: 0px;
+  text-align: center;
 }
