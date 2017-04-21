@@ -1,5 +1,6 @@
 var sx = ["鼠","牛","虎","兔","龙","蛇","马","羊","猴","鸡","狗","猪"]
 $('.btn').on('click',function(){
+
   var date = new Date();
   var nowYear = date.getFullYear()-2008;
   var val = $('input').val();
