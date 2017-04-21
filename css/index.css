@@ -56,7 +56,7 @@ body{
 .output{
   border: 5px solid #0767c8;
   width: 278.4px;
-  height: 348px;
+  height: 347px;
   margin: 0 auto;
   border-radius: 5px;
   display: flex;
@@ -78,8 +78,10 @@ body{
 }
 
 .foot{
-  width: 500px;
+  width: 100%;
   position: fixed;
   bottom: 0px;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
