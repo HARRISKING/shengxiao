@@ -2,31 +2,33 @@ var sx = ["鼠","牛","虎","兔","龙","蛇","马","羊","猴","鸡","狗","猪
 $('.btn').on('click',function(){
 
   var date = new Date();
-  var nowYear = date.getFullYear()-2008;
+  var yearLen = date.getFullYear()-2008;
+  // yearLen代表今年的属相，即数组sx中的属相下标
   var val = $('input').val();
-  if(nowYear<=12){
+  if(yearLen<=12){
     calculate();
   }else{
-    let nowYear = (a-2008)%12-1;
+    // 这里的bug
+    yearLen = (date.getFullYear()-2008)%12;
     calculate();
   }
   function calculate(){
-    if(nowYear<(val%12) && (val%12)!==0){
-      let sx1=nowYear-(val%12)+12;
+    if(yearLen<(val%12) && (val%12)!==0){
+      let sx1=12-(val%12)+yearLen;
       $('.words').html(sx[sx1]);
       let urls = 'url(./pic/' + sx1 + '.jpg)';
       $('.output').css('background-image',urls);
       $('.output').css('background-repeat','no-repeat');
 
-    }else if(nowYear>=(val%12) && (val%12)!==0){
-      let sx1 =(val%12)-1;
+    }else if(yearLen>=(val%12) && (val%12)!==0){
+      let sx1 =yearLen-(val%12);
       $('.words').html(sx[sx1]);
       let urls = 'url(./pic/' + sx1 + '.jpg)';
       $('.output').css('background-image',urls);
       $('.output').css('background-repeat','no-repeat');
 
     }else if((val%12)===0){
-      let sx1 = nowYear;
+      let sx1 = yearLen;
       $('.words').html(sx[sx1]);
       let urls = 'url(./pic/' + sx1 + '.jpg)';
       $('.output').css('background-image',urls);
