@@ -1,0 +1,335 @@
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title></title>
+<link href="http://ss.jiaobu365.com/home/css/bootstrap.min.css" rel="stylesheet">
+<link href="http://ss.jiaobu365.com/home/css/style_header.css" rel="stylesheet" type="text/css">
+<link href="http://ss.jiaobu365.com/home/css/resume_base.css" rel="stylesheet" type="text/css">
+
+<link href="http://ss.jiaobu365.com/home/css/resume_2.css" rel="stylesheet" type="text/css"><script src="http://ss.jiaobu365.com/home/js/jquery-1.7.min.js"></script>
+
+<script src="http://ss.jiaobu365.com/layer/layer.js"></script>
+<style>
+@font-face {
+  font-family: 'iconfont';
+  src: url('iconfont.eot');
+  src: url('iconfont.eot?#iefix') format('embedded-opentype'),
+  url('iconfont.woff') format('woff'),
+  url('iconfont.ttf') format('truetype'),
+  url('iconfont.svg#iconfont') format('svg');
+}
+.iconfont{
+  font-family:"iconfont" !important;
+  font-size:16px;font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+.link:hover{
+	background-color: #254665;
+	border-radius: 5px;
+	color:white !important;
+}
+.baseStyle .baseBorder:hover { border: 1px dashed rgba(141, 165, 252, 0)}
+.baseStyle .positonDiv:hover {border: 1px dashed rgba(141, 165, 252, 0);}
+
+
+.resume_drag{position:absolute !important;z-index:99;width:200px;height:100px;top:50px;left:40%;padding:0 !important;}
+.resume_image{width:auto;height:auto;top:0;left:0;}
+.resume_image .ui-icon-gripsmall-diagonal-se{display:none !important;}
+.resume_image img{display:block;width:100%;height:100%}
+.resume_textarea{top:200px;left:60%;}
+.resume_textarea div.textarea{background:#none;font-size:16px;width:100%;height:100%;}
+.resume_textarea.on div.textarea{border:2px solid #4dafda;background:#fff;}
+.resume_textarea .ui-icon-gripsmall-diagonal-se{display:none !important;}
+
+
+.dispage_dialog_box{width:610px;height:300px;background:#fff; display:none;}
+.dialog_body{padding-top:40px}
+.dialog_body .chooseWay li:nth-child(1){border-right:1px solid #dddcdc;}
+.dialog_body .chooseWay li{float:left;width:49%;text-align: center;color:#ababab;font-size:12px;padding-top:10px;}
+.dialog_body .chooseWay li a{height:42px;line-height:42px;font-size:14px;width:158px;border-radius:8px;background:transparent;border:1px solid #65bfe2;display: block;text-align: center;color:#65bfe2;margin:35px auto 10px auto;}
+.dialog_body .chooseWay li a:hover,.dialog_body .chooseWay li a:focus,.dialog_body .chooseWay li a:active{color:#fff;background:#65bfe2;}
+.dialog_body .chooseWay li .span_bg1{width:110px;height:125px;display: block;margin:0 auto;background:url(http://ss.jiaobu365.com/home/images/pdf.png) no-repeat;}
+.dialog_body .chooseWay li .span_bg2{width:110px;height:125px;display: block;margin:0 auto;background:url(http://ss.jiaobu365.com/home/images/jpg.png) no-repeat;}
+</style>
+</head>
+<body class="bodybg">
+<div class="resume_html" id="resume01">
+<div class="baseStyle clearfix jm0203_j1" id="resume_body" style="height: 1556px;">
+
+			<!----插入的内容----->
+
+			<div class="divLeft clearfix" id="bar">
+        <div class="headDiv" id="resume_is_avatar">
+					<span class="headNotice" id="change_avatar">点击替换头像</span>
+					<input type="hidden" id="small_avatar" value="">
+					<img src="http://img.jiaobu365.com/shearphoto/shearphoto_file/20170222/shearphoto_58ad107790ac8_615_avatar.jpg" id="update_avatar" class="resume_msg" for-key="avatar" for-type="src" width="100%" height="100%">
+				</div>
+				<div id="bar_sort"></div>
+				<!--基本信息-->
+				<div class="msgDiv positonDiv resume_add_area resume_sort" id="resume_msg">
+
+	<div class="baseAge baseMsg baseDel" id="resume_is_age">
+		<div class="delete resume_hidden" for-id="resume_is_age"></div>
+		<a class=" icon wbdfont" for-id="age" style="font-size:none"><i class="iconfont">&#xe643;</i></a>
+		<input class="baseBorder resume_msg resume_lang_age" for-key="age" for-type="val" placeholder="年龄/生日" value="23岁" maxlength="10">
+	</div>
+	<div class="baseAddress baseMsg baseDel" id="resume_is_address">
+		<div class="delete resume_hidden" for-id="resume_is_address"></div>
+		<a class=" icon wbdfont" for-id="address" style="font-size:none"><i class="iconfont">&#xe601;</i></a>
+		<input class="resume_msg baseBorder resume_lang_address" for-key="address" for-type="val" placeholder="联系地址" value="杭州" maxlength="25">
+	</div>
+	<div class="baseMobile baseMsg baseDel" id="resume_is_phone">
+		<div class="delete resume_hidden" for-id="resume_is_phone"></div>
+		<a class=" icon wbdfont" for-id="phone" style="font-size:none"><i class="iconfont">&#xe60a;</i></a>
+		<input class="resume_msg baseBorder resume_lang_mobile" for-key="phone" for-type="val" placeholder="联系电话" value="13588440410" maxlength="20">
+	</div>
+	<div class="baseEmail baseMsg baseDel" id="resume_is_email">
+		<div class="delete resume_hidden" for-id="resume_is_email"></div>
+		<a class=" icon wbdfont" for-id="email" style="font-size:none"><i class="iconfont">&#xe665;</i></a>
+		<input class="resume_msg baseBorder resume_lang_email" for-key="email" for-type="val" placeholder="电子邮箱" value="llc13588440410@outlook" maxlength="25">
+	</div>
+	<div class="custom_information baseMsg baseDel resume_delete_area">
+		<div class="delete resume_delete" style="display: none;"></div>
+		<a class="resume_icon_diy icon wbdfont"><i class="iconfont">&#xe61c;</i></a>
+		<input class="baseBorder" placeholder="自定义" value="HARRISKING">
+	</div>
+  <div class="custom_information baseMsg baseDel resume_delete_area">
+    <div class="delete resume_delete" style="display: none;"></div>
+    <a class="resume_icon_diy icon wbdfont"><i class="iconfont">&#xe61c;</i></a>
+    <input class="baseBorder" placeholder="自定义" value="简书博客名：HARRISKING">
+  </div>
+  <div class="custom_information baseMsg baseDel resume_delete_area">
+		<div class="delete resume_delete" style="display: none;"></div>
+		<a class="resume_icon_diy icon wbdfont"><i class="iconfont">&#xe60d;</i></a>
+		<input class="baseBorder" placeholder="自定义" value="一本双学位（2017年毕业）">
+	</div></div>
+										<div class="skillDiv baseItem positonDiv resume_add_area resume_graph resume_sort" id="resume_graph">
+
+	<dl style="opacity: 1;">
+		<dd>
+			<ul class="skillUl resume_append_area" for-model="graph">
+			<li class="baseDel resume_delete_area resume_graph_item graph_ graph_0" for-id="1109080">
+				<div class="skillTitle"><input class="graph_msg baseBorder" for-type="val" for-key="skill_graph" placeholder="填写你的技能名称" value="HTML"></div>
+				<span><i class="resume_line graph_msg" for-type="style" for-key="style_graph" style="width: 129px;"></i></span>
+				<div class="delete resume_delete" style="display: none;"></div>
+			</li><li class="baseDel resume_delete_area resume_graph_item graph_ graph_1" for-id="1109081">
+				<div class="skillTitle"><input class="graph_msg baseBorder" for-type="val" for-key="skill_graph" placeholder="填写你的技能名称" value="CSS"></div>
+				<span><i class="resume_line graph_msg" for-type="style" for-key="style_graph" style="width: 132px;"></i></span>
+				<div class="delete resume_delete" style="display: none;"></div>
+			</li><li class="baseDel resume_delete_area resume_graph_item graph_ graph_2" for-id="1109082">
+				<div class="skillTitle"><input class="graph_msg baseBorder" for-type="val" for-key="skill_graph" placeholder="填写你的技能名称" value="JavaScript"></div>
+				<span><i class="resume_line graph_msg" for-type="style" for-key="style_graph" style="width: 113px;"></i></span>
+				<div class="delete resume_delete" style="display: none;"></div>
+			</li><li class="baseDel resume_delete_area resume_graph_item graph_ graph_3" for-id="1109083">
+				<div class="skillTitle"><input class="graph_msg baseBorder" for-type="val" for-key="skill_graph" placeholder="填写你的技能名称" value="Node.js"></div>
+				<span><i class="resume_line graph_msg" for-type="style" for-key="style_graph" style="width: 56px;"></i></span>
+				<div class="delete resume_delete" style="display: none;"></div>
+			</li><li class="baseDel resume_delete_area resume_graph_item graph_ graph_5" for-id="1109261">
+				<div class="skillTitle"><input class="graph_msg baseBorder" for-type="val" for-key="skill_graph" placeholder="填写你的技能名称" value="Require.js"></div>
+				<span><i class="resume_line graph_msg" for-type="style" for-key="style_graph" style="width: 45px;"></i></span>
+				<div class="delete resume_delete"></div>
+			</li>
+      <li class="baseDel resume_delete_area resume_graph_item graph_ graph_5" for-id="1109261">
+        <div class="skillTitle"><input class="graph_msg baseBorder" for-type="val" for-key="skill_graph" placeholder="填写你的技能名称" value="react"></div>
+        <span><i class="resume_line graph_msg" for-type="style" for-key="style_graph" style="width: 25px;"></i></span>
+        <div class="delete resume_delete"></div>
+      </li>
+      <li class="baseDel resume_delete_area resume_graph_item graph_ graph_5" for-id="1109261">
+        <div class="skillTitle"><input class="graph_msg baseBorder" for-type="val" for-key="skill_graph" placeholder="填写你的技能名称" value="bootstrap"></div>
+        <span><i class="resume_line graph_msg" for-type="style" for-key="style_graph" style="width: 35px;"></i></span>
+        <div class="delete resume_delete"></div>
+      </li>
+
+      <li class="baseDel resume_delete_area resume_graph_item graph_ graph_5" for-id="1109261">
+        <div class="skillTitle"><input class="graph_msg baseBorder" for-type="val" for-key="skill_graph" placeholder="填写你的技能名称" value="swiper"></div>
+        <span><i class="resume_line graph_msg" for-type="style" for-key="style_graph" style="width: 35px;"></i></span>
+        <div class="delete resume_delete"></div>
+      </li>
+      <li class="baseDel resume_delete_area resume_graph_item graph_ graph_5" for-id="1109261">
+        <div class="skillTitle"><input class="graph_msg baseBorder" for-type="val" for-key="skill_graph" placeholder="填写你的技能名称" value="微信小程序"></div>
+        <span><i class="resume_line graph_msg" for-type="style" for-key="style_graph" style="width: 25px;"></i></span>
+        <div class="delete resume_delete"></div>
+      </li>			</ul>
+		</dd>
+	</dl>
+</div>
+										<div class="hobbyDiv positonDiv resume_add_area resume_icon resume_sort" id="resume_hobby" style="display: none;">
+
+
+</div>			</div>
+			<div class="divRight clearfix resume_main" id="foo">
+				<!--姓名、求职意向-->
+				<div class="nameDiv positonDiv" id="resume_name">
+					<h1>
+						<div class="resume_msg baseBorder resume_notice resume_lang_name" for-key="user_name" for-type="html" contenteditable="true">李连成</div>
+					</h1>
+					<h2>
+						<div class="resume_msg baseBorder resume_notice resume_lang_job" for-key="objective" for-type="html" contenteditable="true">求职目标：web前端工程师</div>
+					</h2>
+				</div>
+				<div id="foo_sort"></div>
+				<div class="eduDiv baseItem positonDiv resume_item resume_add_area resume_sort resume_notice" notice-key="edu" id="resume_edu" style="display:none;">
+
+	<dl>
+		<dt>
+			<a class="resume_icon_diy icon wbdfont" for-id="edu" style="font-size:none"></a>
+			<span><div class="resume_lang_edu" contenteditable="true" data-toggle="tooltip" data-placement="top" title="复制粘贴文字请右键-粘贴为纯文本">教育背景</div><div class="Border resume_line" for-id="edu"></div></span>
+		</dt>
+		<dd class="resume_append_area" for-model="education">
+			<div class="baseContent baseDel resume_item_items resume_delete_area education_ education_0" for-id="639535">
+				<div class="delete resume_delete"></div>
+				<div class="conTitle">
+					<span class="conTitle_time"><div class="education_msg baseBorder" for-key="ed_time" contenteditable="true">2013.9-2017.7</div></span>
+					<span class="conTitle_company"><div class="education_msg baseBorder" for-key="ed_name" contenteditable="true">江西财经大学</div></span>
+					<span class="conTitle_post"><div class="education_msg baseBorder" for-key="ed_major" contenteditable="true">金融（本科）</div></span>
+				</div>
+				<div class="baseDel_ resume_delete_area_">
+					<div class="delete_ resume_delete_"></div>
+					<div class="conDisc baseBorder baseDel education_msg" contenteditable="true" data-toggle="tooltip" data-placement="top" title="复制粘贴文字请右键-粘贴为纯文本" for-key="ed_content">
+										</div>
+				</div>
+			</div>		</dd>
+	</dl>
+</div>
+
+					<div class="custDel baseItem positonDiv resume_item resume_sort resume_notice" notice-key="cert" id="resume_1487739065605" time_id="1487739065605" for-key="cart">
+	<div class="cust_delete resume_custom_delete"></div>
+	<dl class="mouldDiv" time-id="1487739065605" style="opacity: 1;">
+		<dt class="mtitle">
+			<a class="resume_icon_diy icon wbdfont" for-id="cart" style="font-size:none"><i class="iconfont" style="font-size:45px">&#xe63d;</i></a>
+			<span><div class="resume_lang_custom custom_msg" for-key="custom_title" contenteditable="true">JavaScript技能</div><div class="Border resume_line" for-id="cart"></div></span>
+		</dt>
+		<dd>
+			<div class="baseContent custom_" for-id="21696">
+				<div class="conDisc baseBorder resume_lang_cert_value custom_msg" contenteditable="true" data-toggle="tooltip" data-placement="top" title="复制粘贴文字请右键-粘贴为纯文本" for-key="custom_content">
+					<ol><li>通过原生JavaScript能够实现常见效果<br></li><li>熟练使用jQuery<br></li><li>掌握事件模型、DOM操作<br></li><li>能够编写jQuery插件、UI组件<br></li><li>熟悉ajax、jsonp、跨域<br></li><li>掌握闭包、原型链、面型对象、封装<br></li></ol>				</div>
+			</div>
+		</dd>
+	</dl>
+</div>
+
+										<div class="custDel baseItem positonDiv resume_item resume_sort resume_notice" notice-key="cert" id="resume_1487739385003" time_id="1487739385003" for-key="cart">
+
+	<div class="cust_delete resume_custom_delete"></div>
+	<dl class="mouldDiv" time-id="1487739385003">
+		<dt class="mtitle">
+			<a class="resume_icon_diy icon wbdfont" for-id="cart" style="font-size:none"><i class="iconfont" style="font-size:45px">&#xe61b;</i></a>
+			<span><div class="resume_lang_custom custom_msg" for-key="custom_title" contenteditable="true">JavaScript作品范例</div><div class="Border resume_line" for-id="cart"></div></span>
+		</dt>
+		<dd>
+			<div class="baseContent custom_" for-id="21697">
+									<ul><li><a class="link" href="https://harrisking.github.io/leke/src/index.html" style="font-size: 17px; text-decoration: none; color: #3b3b3b;">某知名健身网站（使用swiper框架）</a><br></li><li><a class="link" href="http://htmlpreview.github.io/?https://github.com/HARRISKING/workFile/blob/master/myFlies/D%2B%E5%90%8E%E5%8F%B0/server.html" style="font-size: 17px; text-decoration: none; color: #3b3b3b;">云后台界面（bootstrap框架）</a><br></li><li><a class="link" href="https://harrisking.github.io/shengxiao/index.html" style="font-size: 17px; text-decoration: none; color: #3b3b3b;">移动端生肖小工具（jQuery实现）</a><br></li><li>jQuery插件库(<a class="link" href="http://htmlpreview.github.io/?https://github.com/HARRISKING/jQuery/blob/master/result.html" style="font-size: 17px; text-decoration: none; color: #3b3b3b;">三级广告板</a>，<a class="link" href="http://htmlpreview.github.io/?https://github.com/HARRISKING/jQuery/blob/master/result2.html" style="font-size: 17px; text-decoration: none; color: #3b3b3b;">可无限加载的广告板</a>)<br></li><li><a class="link" href="http://htmlpreview.github.io/?https://github.com/HARRISKING/simpleUI/blob/master/%E8%BD%AE%E6%92%AD%E8%87%AA%E5%8A%A8%E5%8C%96.html" style="font-size: 17px; text-decoration: none; color: #3b3b3b;">原生UI组件轮播</a><br></li></li><li><a class="link" href="http://htmlpreview.github.io/?https://github.com/HARRISKING/workFile/blob/master/myFlies/wechat/dplus/menuh5/wechat/module.html" style="font-size: 17px; text-decoration: none; color: #3b3b3b;">模态框实现</a><br></li><li><a class="link" href="http://htmlpreview.github.io/?https://github.com/HARRISKING/workFile/blob/master/myFlies/wechat/dplus/menuh5/first-page/css3.html" style="font-size: 17px; text-decoration: none; color: #3b3b3b;">仿微软界面随机转化翻转或抖动效果（css3动画+jQuery）</a></li></ul>				</div>
+		</dd>
+	</dl>
+</div>
+
+<div class="cartDiv baseItem positonDiv resume_item resume_sort resume_notice" notice-key="cert" id="resume_skill" for-key="cart">
+
+<dl>
+<dt>
+<a class="resume_icon_diy icon wbdfont" for-id="cart" style="font-size:none"><i class="iconfont" style="font-size:45px">&#xe63d;</i></a>
+<span><div class="resume_lang_cart" contenteditable="true" data-toggle="tooltip" data-placement="top" title="复制粘贴文字请右键-粘贴为纯文本">HTML+CSS技能</div><div class="Border resume_line" for-id="cart"></div></span>
+</dt>
+<dd>
+<div class="baseContent">
+<div class="conDisc baseBorder resume_lang_cert_value skill_msg" contenteditable="true" data-toggle="tooltip" data-placement="top" title="复制粘贴文字请右键-粘贴为纯文本" for-key="skill_content" for-id="590642">
+<p></p><ol><li>严格准守W3C规范，代码可读性高<br></li><li>熟练使用开发者工具进行开发调试<br></li><li>熟练使用HTML5及CSS3；掌握常见布局的用法</li><li>精通盒模型、浮动、定位、BFC、CSS3动画、flex、栅格系统</li><li>熟练使用Git、Atom、sublime、webstore、linux命令行等基本工具<br></li></ol><p></p>				</div>
+</div>
+</dd>
+</dl>
+</div>
+<div class="custDel baseItem positonDiv resume_item resume_sort resume_notice" notice-key="cert" id="resume_1487739463450" time_id="1487739463450" for-key="cart">
+
+<div class="cust_delete resume_custom_delete"></div>
+<dl class="mouldDiv" time-id="1487739463450">
+<dt class="mtitle">
+<a class="resume_icon_diy icon wbdfont" for-id="cart" style="font-size:none"><i class="iconfont" style="font-size:45px">&#xe61b;</i></a>
+<span><div class="resume_lang_custom custom_msg" for-key="custom_title" contenteditable="true">HTML+CSS作品范例</div><div class="Border resume_line" for-id="cart"></div></span>
+</dt>
+<dd>
+<div class="baseContent custom_" for-id="21695">
+<ul><li><a class="link" href="http://htmlpreview.github.io/?https://github.com/HARRISKING/myDemo/blob/master/HTML%2BCSS/CSS3%E5%8A%A8%E7%94%BB%E3%80%81%E8%BF%87%E5%BA%A6%E5%8F%8A3D%E6%95%88%E6%9E%9C/animate.html" style="font-size: 17px; text-decoration: none; color: #3b3b3b;">css3 loading动画   +   Css3 3D效果</a><br></li><li><a class="link" href="http://www.jianshu.com/p/4efda6d16f0e" style="font-size: 17px; text-decoration: none; color: #3b3b3b;">BFC及相关知识点总结博客</a><br></li><li><a class="link" href="http://htmlpreview.github.io/?https://github.com/HARRISKING/myDemo/blob/master/HTML%2BCSS/%E7%BD%91%E9%A1%B5DIV/%E7%81%AB%E5%BD%B1%E5%BF%8D%E8%80%85%E7%BD%91%E9%A1%B5/%E7%81%AB%E5%BD%B1%E5%BF%8D%E8%80%85.html" style="font-size: 17px; text-decoration: none; color: #3b3b3b;">代码规范的动漫网站首页</a><br></li><li>一个简单的UI库（含：<a class="link" href="http://htmlpreview.github.io/?https://github.com/HARRISKING/simpleUI/blob/master/tab%E5%88%87%E6%8D%A2.html" style="font-size: 17px; text-decoration: none; color: #3b3b3b;">tab切换</a>，<a class="link" href="http://htmlpreview.github.io/?https://github.com/HARRISKING/simpleUI/blob/master/%E8%BD%AE%E6%92%AD%E8%87%AA%E5%8A%A8%E5%8C%96.html" style="font-size: 17px; text-decoration: none; color: #3b3b3b;">轮播范例</a>，<a class="link" href="http://htmlpreview.github.io/?https://github.com/HARRISKING/simpleUI/blob/master/%E5%9B%9E%E5%88%B0%E9%A1%B6%E9%83%A8.html" style="font-size: 17px; text-decoration: none; color: #3b3b3b;">回到顶部</a>）</a><br></li><li>常见布局整理（含：<a class="link" href="http://htmlpreview.github.io/?https://github.com/HARRISKING/myDemo/blob/master/HTML%2BCSS/HTML%E5%B8%83%E5%B1%80/%E4%B8%A4%E6%A0%8F%E5%B8%83%E5%B1%80/%E4%B8%A4%E6%A0%8F%E5%B8%83%E5%B1%80%E8%BF%9B%E9%98%B6/%E6%96%B9%E6%B3%95%E4%BA%8C%E4%B8%A4%E6%A0%8F%E5%B8%83%E5%B1%80.html" style="font-size: 17px; text-decoration: none; color: #3b3b3b;">两栏布局</a>，<a class="link" href="http://htmlpreview.github.io/?https://github.com/HARRISKING/myDemo/blob/master/HTML%2BCSS/HTML%E5%B8%83%E5%B1%80/%E4%B8%A4%E6%A0%8F%E5%B8%83%E5%B1%80/%E4%B8%89%E6%A0%8F%E5%B8%83%E5%B1%80.html" style="font-size: 17px; text-decoration: none; color: #3b3b3b;">三栏布局</a>，<a class="link" href="http://htmlpreview.github.io/?https://github.com/HARRISKING/myDemo/blob/master/HTML%2BCSS/HTML%E5%B8%83%E5%B1%80/%E5%8F%8C%E9%A3%9E%E7%BF%BC%E5%B8%83%E5%B1%80/%E5%8F%8C%E9%A3%9E%E7%BF%BC%E5%B8%83%E5%B1%80.html" style="font-size: 17px; text-decoration: none; color: #3b3b3b;">双飞翼布局</a>，<a class="link" href="http://htmlpreview.github.io/?https://github.com/HARRISKING/myDemo/blob/master/HTML%2BCSS/HTML%E5%B8%83%E5%B1%80/%E5%9C%A3%E6%9D%AF%E5%B8%83%E5%B1%80/%E5%9C%A3%E6%9D%AF%E5%B8%83%E5%B1%80%EF%BC%88%E8%B4%9F%E8%BE%B9%E8%B7%9D%E6%96%B9%E6%B3%95%EF%BC%89.html" style="font-size: 17px; text-decoration: none; color: #3b3b3b;">圣杯布局)</a><br></li></ul>				</div>
+</dd>
+</dl>
+</div>
+					<div class="campusDiv baseItem positonDiv resume_item resume_add_area resume_sort resume_notice" notice-key="campus" id="resume_campus">
+	<div class="experbtn"><i class="btnExp" data-placement="top" title="打开列表"></i></div>
+	<dl>
+		<dt>
+			<a class="resume_icon_diy icon wbdfont" for-id="campus" style="font-size:none"><i class="iconfont" style="font-size:45px">&#xe620;</i></a>
+			<span><div class="resume_lang_in_school" contenteditable="true" data-toggle="tooltip" data-placement="top" title="复制粘贴文字请右键-粘贴为纯文本">校外实践</div><div class="Border resume_line" for-id="campus"></div></span>
+		</dt>
+		<dd class="resume_append_area" for-model="campus">
+			<div class="baseContent baseDel resume_item_items resume_delete_area campus_ campus_0" for-id="604524">
+				<div class="delete resume_delete" style="display: none;"></div>
+				<div class="conTitle">
+					<span class="conTitle_time"><div class="campus_msg baseBorder" contenteditable="true" for-key="campus_time">2016.09-2017.05</div></span>
+					<span class="conTitle_company"><div class="campus_msg baseBorder" contenteditable="true" for-key="campus_name">北京模卡科技互动有限公司</div></span>
+					<span class="conTitle_post"><div class="campus_msg baseBorder" contenteditable="true" for-key="campus_job">web前端开发</div></span>
+				</div>
+				<div class="baseDel_ resume_delete_area_">
+					<div class="delete_ resume_delete_"></div>
+					<div class="conDisc baseBorder campus_msg" contenteditable="true" data-toggle="tooltip" data-placement="top" title="复制粘贴文字请右键-粘贴为纯文本" for-key="campus_content">
+					<p style="text-align: left;">1，负责将UI的设计图还原成页面。能够准确的还原设计图纸，精雕细琢直至完美；</p>
+        <p style="text-align: left;">2，微信小程序开发工作。目前拥有一项微信小程序；</p>							</div>
+        <p style="text-align: left;">3，目前自学react、webpack；</p>
+        <p style="text-align: left;">4，使用node.js进行开发工作。</p>
+				</div>
+			</div>		</dd>
+	</dl>
+</div>
+
+										<div class="workDiv baseItem positonDiv resume_item resume_add_area resume_sort resume_notice" id="resume_work" style="display:none;">
+	<div class="experbtn"><i class="btnExp" data-placement="top" title="打开列表"></i></div>
+	<dl>
+		<dt>
+			<a class="resume_icon_diy icon wbdfont" for-id="work" style="font-size:none"></a>
+			<span><div class="resume_lang_work" contenteditable="true" data-toggle="tooltip" data-placement="top" title="复制粘贴文字请右键-粘贴为纯文本">工作经历</div><div class="Border resume_line" for-id="work"></div></span>
+		</dt>
+
+	</dl>
+</div>
+										<div class="custDel baseItem positonDiv resume_item resume_sort resume_notice" notice-key="cert" id="resume_1487739749578" time_id="1487739749578" for-key="cart">
+
+	<div class="cust_delete resume_custom_delete"></div>
+	<dl class="mouldDiv" time-id="1487739749578" style="opacity: 1;">
+		<dt class="mtitle">
+			<a class="resume_icon_diy icon wbdfont" for-id="cart" style="font-size:none"><i class="iconfont" style="font-size:45px">&#xe63c;</i></a>
+			<span><div class="resume_lang_custom custom_msg" for-key="custom_title" contenteditable="true">技能证书</div><div class="Border resume_line" for-id="cart"></div></span>
+		</dt>
+		<dd>
+			<div class="baseContent custom_" for-id="21698">
+				<div class="conDisc baseBorder resume_lang_cert_value custom_msg" contenteditable="true" data-toggle="tooltip" data-placement="top" title="复制粘贴文字请右键-粘贴为纯文本" for-key="custom_content">
+					<ul><li>语言：大学英语四级<br></li><li>驾驶：机动车驾驶证C1<br></li><li>其他：ERP技能证书<br></li><li>其他：专利证书——市场营销产品展示系统<br></li></ul>				</div>
+			</div>
+		</dd>
+	</dl>
+</div>
+					<!-- <div class="honorDiv baseItem positonDiv resume_item resume_sort resume_notice" notice-key="honor" id="resume_honor" for-key="honor">
+
+	<dl>
+		<dt>
+			<a class="resume_icon_diy icon wbdfont" for-id="honor" style="font-size:none"><i class="iconfont" style="font-size:45px">&#xe662;</i></a>
+			<span><div class="resume_lang_honor" contenteditable="true" data-toggle="tooltip" data-placement="top" title="复制粘贴文字请右键-粘贴为纯文本"><i class="iconfont .icon-Git"></i>奖项荣誉</div><div class="Border resume_line" for-id="honor"></div></span>
+		</dt>
+		<dd>
+			<div class="baseContent">
+				<div class="conDisc baseBorder resume_lang_honor_value honor_msg" contenteditable="true" data-toggle="tooltip" data-placement="top" title="复制粘贴文字请右键-粘贴为纯文本" for-key="honor_content" for-id="579090">
+				<p>2016.09 &nbsp;获得江西财经大学“团内民主评议评优评先工作”优秀学生干部（学院1%名额）</p><p>2016.03 &nbsp;获得江西财经大学“团内民主评议评优评先工作”优秀团干称号（学院1%名额）</p><p>2014.06 &nbsp;获得工商管理学院分团委、学生会部门“先进个人”称号（学院5%名额）</p><p>2014.05 &nbsp;获得江西财经大学“团内民主评议评优评先工作”优秀团员称号（学院3%名额）</p>				</div>
+			</div>
+		</dd>
+	</dl>
+</div> -->
+
+			</div>
+		</div></div>
+
+
+
+</body>
+
+</html>
